@@ -12,17 +12,16 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [py<33]
+  number: 1000
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . -vvv"
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.5
+    - pip
   run:
-    - python
-    - asyncio  # [py<34]
+    - python >=3.5
     - pymysql >=0.7.5
 
 test:
@@ -38,3 +37,4 @@ about:
 extra:
   recipe-maintainers:
     - kszucs
+    - xhochy

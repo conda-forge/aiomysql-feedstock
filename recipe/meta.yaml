@@ -1,6 +1,6 @@
 {% set name = "aiomysql" %}
-{% set version = "0.0.20" %}
-{% set sha256 = "d89ce25d44dadb43cf2d9e4603bd67b7a0ad12d5e67208de013629ba648df2ba" %}
+{% set version = "0.0.21" %}
+{% set sha256 = "811569c0db118dd2685f0878f5cebf17a11e89a995fa14261d5fa0254113842c" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vvv"
+  script: {{ PYTHON }} -m pip install . -vvv
 
 requirements:
   host:
@@ -30,7 +30,7 @@ test:
 
 about:
   home: https://github.com/aio-libs/aiomysql
-  summary: "aiomysql is a library for accessing a MySQL database from the asyncio"
+  summary: aiomysql is a library for accessing a MySQL database from the asyncio
   license: MIT
   license_file: LICENSE
 

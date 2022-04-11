@@ -1,6 +1,6 @@
 {% set name = "aiomysql" %}
-{% set version = "0.0.22" %}
-{% set sha256 = "9bcf8f26d22e550f75cabd635fa19a55c45f835eea008275960cb37acadd622a" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "ef04453a3a3ecbd670f813e09d3944d15845b572b34caef3ff715c0140e1ae21" %}
 
 package:
   name: {{ name|lower }}

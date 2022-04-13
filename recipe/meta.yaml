@@ -1,15 +1,13 @@
 {% set name = "aiomysql" %}
-{% set version = "0.0.22" %}
-{% set sha256 = "9bcf8f26d22e550f75cabd635fa19a55c45f835eea008275960cb37acadd622a" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: ef04453a3a3ecbd670f813e09d3944d15845b572b34caef3ff715c0140e1ae21
 
 build:
   number: 0
@@ -18,11 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - pip
+    - pymysql >=1.0
   run:
-    - python >=3.5
-    - pymysql >=0.9.0,<=0.9.2
+    - python >=3.7
+    - pymysql >=1.0
 
 test:
   imports:

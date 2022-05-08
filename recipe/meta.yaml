@@ -1,5 +1,5 @@
 {% set name = "aiomysql" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ef04453a3a3ecbd670f813e09d3944d15845b572b34caef3ff715c0140e1ae21
+  sha256: 0d686c4fdae6b67d1825d8be60fa3b0e644fca2c84d3c936d850fc259c8e107e
 
 build:
   number: 0

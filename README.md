@@ -1,11 +1,11 @@
-About aiomysql
-==============
+About aiomysql-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiomysql-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/aio-libs/aiomysql
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aiomysql-feedstock/blob/main/LICENSE.txt)
 
 Summary: aiomysql is a library for accessing a MySQL database from the asyncio
 

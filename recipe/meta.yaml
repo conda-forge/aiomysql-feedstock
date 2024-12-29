@@ -6,25 +6,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 558b9c26d580d08b8c5fd1be23c5231ce3aeff2dadad989540fee740253deb67
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools_scm >=6.4,<7
     - pymysql >=1.0
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pymysql >=1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - aiomysql
 
